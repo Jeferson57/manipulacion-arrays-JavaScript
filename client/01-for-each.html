@@ -9,10 +9,12 @@
 <body>
     <h1>To do list:</h1>
     <div id="app"></div>
+    
+    
 
     <script>
         const app = document.querySelector('#app');
-        const toDoList = document.creatElement('ul');
+        const toDoList = document.createElement('ol');
         const toDo = [
             {emojie: '💻', title: 'study', description: 'Take the JavaScript Array Course'},
             {emojie: '🎸', title: 'practice', description: 'Practice 30 minutes guitar'},
@@ -20,6 +22,16 @@
         ]
 
         app.appendChild(toDoList);
+
+        toDo.forEach((item) => {
+            toDoList.innerHTML += `<li>
+                        <input type="checkbox" id="${item.title}">
+                        <label for="${item.title}"">
+                            <span>${item.emojie} ${item.title}:</span>
+                            <p>${item.description}</p>
+                        </label>
+                    </li>`;
+        })
 
     </script>
 </body>
