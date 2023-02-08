@@ -75,3 +75,16 @@ const rta = words.filter(item => item.length >= 6);
 
 // Output: [ 'exuberant' ]
 ```
+
+## reduce()
+
+El método `.reduce()` hace exactamente como su nombre lo dice, reduce un array de elementos a un solo valor. Este método no devuelve otro array, en algunos casos si lo hace, pero depende más del algoritmo que estemos programando.
+
+Este método recibe dos parámetros; el primero es una función y el segundo es el estado inicial. La función que recibe debe de recibir dos parámetros que es; el valor acumulado (el resultado de la operación que ejecuta) y el valor actual (cada elemento del array), y el estado inicial representa el valor con el cual empieza la operación. 
+
+```jsx
+const totals = [1, 2, 3, 4];
+const rta = totals.reduce((sum, element) => sum + element, 0);
+
+// Output: 10
+```
