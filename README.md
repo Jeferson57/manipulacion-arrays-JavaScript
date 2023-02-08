@@ -50,14 +50,28 @@ Para poder crear una copia sin modificar la referencia en memoria vamos a asegur
 ```jsx
 // Tenemos un array de objetos, donde cada objeto es una orden y queremos agregar una nueva propieda a cada objeto
 orders.map((item) => {
-		return {
-			// Para evitar modificar la referencia en momoria clonamos todas las propiedades del objeto en un nuevo objeto
-			...item,
-			// Agregamos la propiedade que queremos
-			tax: .19
-		};
-	}
+        return {
+            // Para evitar modificar la referencia en momoria clonamos todas las propiedades del objeto en un nuevo objeto
+            ...item,
+            // Agregamos la propiedade que queremos
+            tax: .19
+        };
+    }
 )
 
 // De esta forma nos aseguramos de que el array original se queda igual pero el array que nos devuelve .map() es totalmente distinto
+```
+
+## filter()
+
+EL método `.filter()` nos ayuda a filtrar los elementos de un array con base a un condicional. Los elementos que cumplan ese condicional van a ser parte de ese nuevo array.
+
+Quiere decir que este método es inmutable, ósea que no cambia el array original, sino que crear uno nuevo con los elementos que cumplan con la condición.
+
+```jsx
+// Aquí filtramos el array word para que nos devuelva un nuevo array que tenga solo los elementos que tangan más y 6 letras.
+const words = ['spray', 'limit', 'elite', 'exuberant'];
+const rta = words.filter(item => item.length >= 6);
+
+// Output: [ 'exuberant' ]
 ```
