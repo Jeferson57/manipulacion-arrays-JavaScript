@@ -22,6 +22,10 @@ Con el método `.forEach()` solo debemos de enviar una `arrow function` como par
 ```jsx
 const letters = ['a', 'b', 'c'];
 letters.forEach(item => console.log(item));
+
+// Output: a
+//         b
+//         c
 ```
 
 ## map()
@@ -34,5 +38,26 @@ Hay que tener en cuenta que `.máp()` es **inmutable**, quiere decir que no modi
 const letters = ['a', 'b', 'c'];
 const newArray = letters.map(item => item + '++');
 
-console.log(newArray);
+// Output: [ 'a++', 'b++', 'c++' ]
+```
+
+## Map Reloaded
+
+Cuando trabajamos con objetos en el método `.map()` estamos generando una modificación a la referencia del objeto que está en memoria. Así que cuando hacemos una transformación a un objeto con el método `.map()` estamos transformando la referencia del objeto y, por ende, también se va a modificar el objeto original.
+
+Para poder crear una copia sin modificar la referencia en memoria vamos a asegurarnos de generar un nuevo objeto con el `spread operador`. Por ejemplo, si queremos agregar una nueva propiedad a un objeto vamos a clonar los atributos del objeto con el `spread operador` y luego agregamos la propiedad que deseamos:
+
+```jsx
+// Tenemos un array de objetos, donde cada objeto es una orden y queremos agregar una nueva propieda a cada objeto
+orders.map((item) => {
+		return {
+			// Para evitar modificar la referencia en momoria clonamos todas las propiedades del objeto en un nuevo objeto
+			...item,
+			// Agregamos la propiedade que queremos
+			tax: .19
+		};
+	}
+)
+
+// De esta forma nos aseguramos de que el array original se queda igual pero el array que nos devuelve .map() es totalmente distinto
 ```
