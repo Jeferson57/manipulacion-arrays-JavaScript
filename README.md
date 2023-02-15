@@ -88,3 +88,16 @@ const rta = totals.reduce((sum, element) => sum + element, 0);
 
 // Output: 10
 ```
+
+## some()
+
+El método `.some()` precisamente nos dice “si alguno cumple con la condicional” nos retorna un valor booleano.
+
+```jsx
+const numbers = [1, 2, 3, 4];
+
+// "Si algun elemento es número par"
+const rta = numbers.some(item => item % 2 === 0);
+
+// Output: true
+```
