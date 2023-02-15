@@ -91,7 +91,7 @@ const rta = totals.reduce((sum, element) => sum + element, 0);
 
 ## some()
 
-El método `.some()` precisamente nos dice “si alguno cumple con la condicional” nos retorna un valor booleano.
+El método `.some()` precisamente nos dice “si **alguno** cumple con la condicional” nos retorna un valor booleano.
 
 ```jsx
 const numbers = [1, 2, 3, 4];
@@ -100,4 +100,15 @@ const numbers = [1, 2, 3, 4];
 const rta = numbers.some(item => item % 2 === 0);
 
 // Output: true
+```
+
+## every()
+
+El método `.every()` es totalmente lo opuesto de `.some()`. En el caso de este elemento, todos los elementos deben de cumplir la condición para retornar un valor booleano.
+
+```jsx
+const numbers = [1, 30, 49, 29, 10, 13];
+const rta = numbers.every(item => item <= 40);
+
+// Output: false
 ```
