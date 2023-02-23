@@ -112,3 +112,24 @@ const rta = numbers.every(item => item <= 40);
 
 // Output: false
 ```
+
+# find() y findIndex()
+
+El método `.find()` es muy similar al método `.filter()`, pero tiene una excepción. Este método solo nos va a retornar el elemento como tal que cumpla con la condición, ya no devuelve un array, sino que literal devuelve el elemento.
+
+Si no encuentra ningún elemento que cumpla con la condición nos va a devolver `undefined`.
+
+```jsx
+const numbers = [1, 30, 49, 29, 10, 13];
+const rta1 = numbers.find(item => item === 30);
+
+// Output: 30
+```
+
+Este método tiene otra variante que es `.findIndex()` que ya no nos devuelve el elemento si no que la posición del elemento. Si no encuentra ningún elemento que cumpla la condición devuelve -1
+
+```jsx
+const rta2 = products.findIndex(item => item === 30);
+
+// Output: 1
+```
