@@ -10,7 +10,8 @@ console.log("products", products);
 console.log("myProducts", myProducts);
 console.log("-".repeat(10));
 
-const productIndex = products.findIndex(item => item.id === '🍔')
+// Sacamos un elemento del array de products y lo colocamos en el array de myProducts
+const productIndex = products.findIndex(item => item.id === '🍔');
 if (productIndex !== -1) {
     myProducts.push(products[productIndex]);
     products.splice(productIndex, 1);
@@ -21,6 +22,7 @@ console.log("-".repeat(10));
 
 
 // Update
+// Queremos hacer un actualización sobre un elemento del array
 
 const productsV2 = [
     { title: 'Pizza', price: 121, id: '🍕' },
