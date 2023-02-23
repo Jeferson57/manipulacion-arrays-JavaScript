@@ -208,3 +208,21 @@ const rta = users.flatMap(user => user.attributes);
 
 // Output: [ 'Nice', 'Cute', 'Lovely', 'Nice', 'Cool' ]
 ```
+
+# sort()
+
+El método `.sort()` nos ayuda a ordenar los elementos de un array. Este método es mutable, ósea que cambia el array original. El modo de ordenación corresponde a la posición del valor del string de acuerdo a su valor Unicode.
+
+```jsx
+const months = ["March", "Jan", "Feb", "Dec"];
+months.sort();
+
+// Output: [ 'Dec', 'Feb', 'Jan', 'March' ]
+// De acuerdo al estandar Unicode
+
+// Podemos usar una función de comparación 
+const numbers = [1, 30, 4, 21, 100000];
+numbers.sort((a, b) => a - b);
+
+// Output: [ 1, 4, 21, 30, 100000 ]
+```
