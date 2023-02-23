@@ -173,3 +173,38 @@ const rta = elements.concat(otherElements, moreElements);
 
 // Output: [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6]
 ```
+
+# flat()
+
+El método `.flat()` nos sirve para aplanar un array de arrays. Por ejemplo, cuando trabajamos con matrices en JavaScript, una matriz en JS la podríamos emular como un array de arrays y de esa manera podemos obtener las dos dimensiones que forman una matriz, pero en algún punto queremos sintetizar eso en un solo array, este método nos puede ayudar en eso. 
+
+```jsx
+const matriz = [
+    [1, 2, 3, [2, 4, 5, [6, 7, 8]]],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+// Por parámetro le específicamos hasta la profundidad que queremos aplanar
+const rta = matriz.flat(3);
+
+// Output: [1, 2, 3, 2, 4, 5, 6, 7, 8, 4, 5, 6, 7, 8, 9]
+```
+
+# flatMap()
+
+El método `.flatMap()` tiene la función entre un `.flat()` y un `.map()`. Primero realiza la transformación en cada elemento del array, y después los aplana en una sola profundidad.
+
+Este método es inmutable, ósea que regresa un nuevo array.
+
+```jsx
+const users = [
+    { userId: 1, username: "Tom", attributes: ["Nice", "Cute"] },
+    { userId: 2, username: "Mike", attributes: ["Lovely"] },
+    { userId: 3, username: "Nico", attributes: ["Nice", "Cool"] },
+]
+
+const rta = users.flatMap(user => user.attributes);
+
+// Output: [ 'Nice', 'Cute', 'Lovely', 'Nice', 'Cool' ]
+```
