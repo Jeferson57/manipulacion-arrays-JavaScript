@@ -133,3 +133,43 @@ const rta2 = products.findIndex(item => item === 30);
 
 // Output: 1
 ```
+
+# includes()
+
+Este método lo que nos dice es que si un elemento está incluido dentro del array.
+
+Este método nos devuelve verdadero o falso de que, si o no encentre al elemento y a diferencia de los demás este método nos recibe una función anónima como parámetro, sino que sola mente recibe al elemento que estamos buscando.
+
+```jsx
+const pets = ['cat', 'dog', 'bat'];
+const rta = pets.includes('dog');
+console.log(`¿Hay un perro dentro del Array de mascotas?: ${rta}`);
+
+// Output: true
+```
+
+# join()
+
+El método `.join()` nos sirve para unificar todo un Array conforme a un patrón.
+
+```jsx
+const elements = ["Fire", "Air", "Water"];
+const rta = elements.join('--');
+
+// Output: Fire--Air--Water
+```
+
+# concat()
+
+El método `.concat()` nos sirve para fusionar los elementos de dos o más Arrays en uno solo. Debemos recordar que este método es inmutable, ósea que no modificar el array original, sino que simplemente genera uno nuevo.
+
+```jsx
+const elements = [1, 1, 2, 2];
+const otherElements = [3, 3, 4, 4];
+const moreElements = [5, 5, 6, 6];
+
+// Fusionamos los array con el método .concat()
+const rta = elements.concat(otherElements, moreElements);
+
+// Output: [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6]
+```
