@@ -113,7 +113,7 @@ const rta = numbers.every(item => item <= 40);
 // Output: false
 ```
 
-# find() y findIndex()
+## find() y findIndex()
 
 El método `.find()` es muy similar al método `.filter()`, pero tiene una excepción. Este método solo nos va a retornar el elemento como tal que cumpla con la condición, ya no devuelve un array, sino que literal devuelve el elemento.
 
@@ -134,7 +134,7 @@ const rta2 = products.findIndex(item => item === 30);
 // Output: 1
 ```
 
-# includes()
+## includes()
 
 Este método lo que nos dice es que si un elemento está incluido dentro del array.
 
@@ -148,7 +148,7 @@ console.log(`¿Hay un perro dentro del Array de mascotas?: ${rta}`);
 // Output: true
 ```
 
-# join()
+## join()
 
 El método `.join()` nos sirve para unificar todo un Array conforme a un patrón.
 
@@ -159,7 +159,7 @@ const rta = elements.join('--');
 // Output: Fire--Air--Water
 ```
 
-# concat()
+## concat()
 
 El método `.concat()` nos sirve para fusionar los elementos de dos o más Arrays en uno solo. Debemos recordar que este método es inmutable, ósea que no modificar el array original, sino que simplemente genera uno nuevo.
 
@@ -174,7 +174,7 @@ const rta = elements.concat(otherElements, moreElements);
 // Output: [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6]
 ```
 
-# flat()
+## flat()
 
 El método `.flat()` nos sirve para aplanar un array de arrays. Por ejemplo, cuando trabajamos con matrices en JavaScript, una matriz en JS la podríamos emular como un array de arrays y de esa manera podemos obtener las dos dimensiones que forman una matriz, pero en algún punto queremos sintetizar eso en un solo array, este método nos puede ayudar en eso. 
 
@@ -191,7 +191,7 @@ const rta = matriz.flat(3);
 // Output: [1, 2, 3, 2, 4, 5, 6, 7, 8, 4, 5, 6, 7, 8, 9]
 ```
 
-# flatMap()
+## flatMap()
 
 El método `.flatMap()` tiene la función entre un `.flat()` y un `.map()`. Primero realiza la transformación en cada elemento del array, y después los aplana en una sola profundidad.
 
@@ -209,7 +209,7 @@ const rta = users.flatMap(user => user.attributes);
 // Output: [ 'Nice', 'Cute', 'Lovely', 'Nice', 'Cool' ]
 ```
 
-# sort()
+## sort()
 
 El método `.sort()` nos ayuda a ordenar los elementos de un array. Este método es mutable, ósea que cambia el array original. El modo de ordenación corresponde a la posición del valor del string de acuerdo a su valor Unicode.
 
