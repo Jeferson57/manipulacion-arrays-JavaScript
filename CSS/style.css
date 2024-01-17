@@ -8,42 +8,34 @@ body {
     font-family: 'Rubik', sans-serif;
 }
 
-#app {
-    width: 100dvw;
-    height: 100dvh;
-}
-
 main {
     width: 100vw;
+    overflow: hidden;
 }
 
-.container-banner {
+.container-background {
     position: relative;
     background-color: #0c0c14;
     width: 100%;
     height: 100vh;
-    display: flex;
-    /* justify-content: center; */
-    align-items: center;
-    overflow: hidden;
 }
 
-.container-banner span:nth-child(2) {
+.container-background span:nth-child(1) {
     position: absolute;
-    top: -60px;
-    left: 86px;
+    top: -145px;
+    left: 15px;
     width: 850px;
     height: 850px;
     background-color: #073B4C;
     border-radius: 100%;
     filter: blur(76px);
-    opacity: 0.5;
+    opacity: 0.8;
 }
 
-.container-banner span:nth-child(3) {
+.container-background span:nth-child(2) {
     position: absolute;
-    top: 90px;
-    left: 286px;
+    top: 20px;
+    left: 100px;
     width: 650px;
     height: 650px;
     background-color: #ec7632;
@@ -52,10 +44,10 @@ main {
     opacity: 0.6;
 }
 
-.container-banner span:nth-child(4) {
+.container-background span:nth-child(3) {
     position: absolute;
-    top: 151px;
-    left: 332px;
+    top: 72px;
+    left: 223px;
     width: 350px;
     height: 350px;
     background-color: #06D6A0;
@@ -64,10 +56,10 @@ main {
     opacity: 0.6;
 }
 
-.container-banner span:nth-child(5) {
+.container-background span:nth-child(4) {
     position: absolute;
     top: 162px;
-    left: 495px;
+    left: 256px;
     width: 450px;
     height: 450px;
     background-color: #EF476F;
@@ -76,10 +68,10 @@ main {
     opacity: 0.6;
 }
 
-.container-banner span:nth-child(6) {
+.container-background span:nth-child(5) {
     position: absolute;
     top: 351px;
-    left: 537px;
+    left: 318px;
     width: 350px;
     height: 350px;
     background-color: #FFD166;
@@ -89,21 +81,34 @@ main {
     opacity: 0.7;
 }
 
-.container-banner h1 {
+.container-banner {
     position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-js-icon {
+    width: 42px;
+    height: 42px;
+    margin-bottom: 42px;
+    border-radius: 4px;
+}
+
+.container-banner h1 {
     color: white;
-    font-size: 5rem;
+    font-size: 2.5rem;
     font-weight: 500;
-    max-width: 728px;
-    text-align: start;
+    max-width: 428px;
+    text-align: center;
     z-index: 1;
-    left: 190px;
 }
 
 .container-banner-search {
-    position: absolute;
-    left: 190px;
-    top: 590px;
     width: 320px;
     height: 42px;
     padding: 12px;
@@ -113,8 +118,60 @@ main {
     background-color: transparent;
     outline: none;
     font-size: 1.3rem;
+    margin-top: 42px;
 }
 
 .container-banner-search::placeholder {
-    color: rgba(173, 173, 173, 0.603);
+    color: rgba(173, 173, 173, 0.808);
+}
+
+@media (min-width: 768px) {
+    main {
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .container-background {
+        position: absolute;
+        overflow: hidden;
+    }
+
+    .container-background span:nth-child(1) {
+        top: -60px;
+        left: 86px;
+        opacity: 0.5;
+    }
+
+    .container-background span:nth-child(2) {
+        top: 90px;
+        left: 286px;
+    }
+
+    .container-background span:nth-child(3) {
+        top: 151px;
+        left: 332px;
+    }
+
+    .container-background span:nth-child(4) {
+        top: 162px;
+        left: 495px;
+    }
+
+    .container-background span:nth-child(5) {
+        top: 351px;
+        left: 537px;
+    }
+
+    .container-banner {
+        width: 70vw;
+        align-items: start;
+    }
+
+    .container-banner h1 {
+        text-align: start;
+        font-size: 5rem;
+        max-width: 728px;
+    }
+
 }
