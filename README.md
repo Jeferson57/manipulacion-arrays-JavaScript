@@ -1,4 +1,5 @@
 # Curso manipulacion de Arrays
+![](./images/screenshot.png)
 
 ## Mutabilidad e inmutabilidad
 
