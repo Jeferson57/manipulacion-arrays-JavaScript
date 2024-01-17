@@ -25,6 +25,7 @@ main {
     display: flex;
     /* justify-content: center; */
     align-items: center;
+    overflow: hidden;
 }
 
 .container-banner span:nth-child(2) {
@@ -97,4 +98,23 @@ main {
     text-align: start;
     z-index: 1;
     left: 190px;
+}
+
+.container-banner-search {
+    position: absolute;
+    left: 190px;
+    top: 590px;
+    width: 320px;
+    height: 42px;
+    padding: 12px;
+    border: white solid 2px;
+    color: white;
+    border-radius: 8px;
+    background-color: transparent;
+    outline: none;
+    font-size: 1.3rem;
+}
+
+.container-banner-search::placeholder {
+    color: rgba(173, 173, 173, 0.603);
 }
