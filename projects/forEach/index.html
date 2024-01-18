@@ -7,15 +7,49 @@
     <title>Lista de Tareas</title>
 </head>
 <body>
-    <div class="container">
-        <form id="taskForm">
-            <input type="text" id="taskInput" placeholder="Agrega nueva tarea" required>
-            <button type="submit" id="buttonAdd">Agregar</button>
-        </form>
+    <h1><code>forEach()</code></h1>
+    <p class="text-description">
+        El método <code>forEach()</code> ejecuta la función 
+        indicada una vez por cada elemento del array.
+    </p>
+    <p class="text-description">
+        En este proyecto utilicé el método <code>forEach()</code>
+        para limpiar la lista de tareas con el boton "Limpiar todo" 
+    </p>
+    <div class="content-taskListApp">
+        <div class="container">
+            <form id="taskForm">
+                <input 
+                    type="text" 
+                    id="taskInput"
+                    class="taskForm-input" 
+                    placeholder="Agrega nueva tarea" 
+                    required>
+                <button type="submit" id="buttonAdd" class="taskForm-button">Agregar</button>
+            </form>
+        </div>
+    
+        <ul id="taskList">
+            <li>
+                Aprender JS
+                <span>✅</span>
+                <button>❌</button>
+            </li>
+            <li>
+                Aprender CSS
+                <span>✅</span>
+                <button>❌</button>
+            </li>
+            <li>
+                Aprender HTML
+                <span>✅</span>
+                <button>❌</button>
+            </li>
+        </ul>
+        <button id="clean-all" class="button-clean">
+            Limpiar todo
+        </button>
     </div>
-
-    <ul id="taskList"></ul>
-    <button id="clean-all">Limpiar todo</button>
 
     <script src="./script.js"></script>
 </body>
