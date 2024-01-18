@@ -2,6 +2,7 @@ const taskForm = document.getElementById('taskForm');
 const button = document.getElementById('buttonAdd');
 const taskInput = document.getElementById('taskInput');
 const taskList = document.getElementById('taskList');
+const cleanButton = document.getElementById('clean-all');
 
 button.addEventListener('click', function() {
     const taskText = taskInput.value.trim();
@@ -30,10 +31,9 @@ function addTask(text) {
     taskInput.value = '';
 }
 
-// const tasks = document.querySelectorAll('#taskList li');
-// tasks.forEach(function(task) {
-//     console.log(task);
-//     task.addEventListener('click', function () {
-//         task.classList.toggle('completed');
-//     })
-// })
+cleanButton.addEventListener('click', function() {
+    const tasks = document.querySelectorAll('#taskList li');
+    tasks.forEach(function( task) {
+        taskList.removeChild(task);
+    })
+});
