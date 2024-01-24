@@ -1,0 +1,60 @@
+.container-projests {
+    width: 80%;
+    margin: auto;
+}
+
+.container-projests h2 {
+    font-size: 2.4rem;
+    color: var(--white-color);
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.grid-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 18px;
+}
+
+.card-project {
+    width: 100%;
+    height: auto;
+    border: 2px solid var(--white-color);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    padding: 1.6rem;
+}
+
+.card-project img {
+    width: 38px;
+    height: 38px;
+}
+
+.card-project div h3 {
+    font-size: 2.0rem;
+    font-weight: 400;
+    color: var(--white-color);
+}
+
+.card-project div p {
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: var(--white-color);
+    margin-top: 4px;
+}
+
+.card-project div button {
+    width: 110px;
+    height: 32px;
+    margin-top: 12px;
+    border: 2px solid var(--green-color);
+    border-radius: 8px;
+    background-color: transparent;
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: var(--green-color);
+}
