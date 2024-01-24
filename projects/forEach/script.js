@@ -16,17 +16,20 @@ function addTask(text) {
     const li = document.createElement('li');
     const span = document.createElement('span');
     const deleteButton = document.createElement('button');
+    const containerButtons = document.createElement('div');
 
     li.textContent = text;
-    deleteButton.textContent = 'Eliminar';
+    deleteButton.textContent = '❌';
     deleteButton.addEventListener('click', function() {
         li.remove();
     });
 
-    li.appendChild(span);
+    containerButtons.appendChild(span);
     span.textContent = '✅'
-    li.appendChild(deleteButton);
+    containerButtons.appendChild(deleteButton);
     taskList.appendChild(li);
+
+    li.appendChild(containerButtons);
 
     taskInput.value = '';
 }
